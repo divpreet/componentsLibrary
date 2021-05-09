@@ -18,8 +18,7 @@
     src: url('./Component.eot?lr2bv3');
     src: url('./Component.eot?lr2bv3#iefix') format('embedded-opentype'),
         url('./Component.ttf?lr2bv3') format('truetype'),
-        url('./Component.woff?lr2bv3') format('woff'),
-        url('./Component.svg?lr2bv3#Component') format('svg');
+        url('./Component.woff?lr2bv3') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;

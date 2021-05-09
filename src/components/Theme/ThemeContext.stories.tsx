@@ -6,8 +6,8 @@ import { isDarkStoryMode } from '../../../.storybook/preview';
 import { select } from '@storybook/addon-knobs';
 import { ThemeProvider } from './ThemeContext';
 import ComponentProducts from '../../utils/products';
-import Loader from '../Loader';
 import IconButton from '../IconButton';
+import { Loader } from '../index';
 
 export default {
     title: 'Foundation / Theme',
@@ -31,7 +31,8 @@ const DummyComponent: React.FC = () => {
             </Paper>
             <Box display="flex" flexWrap="wrap" justifyContent="space-around" p={2}>
                 <IconButton
-                    icon={'icon-close'}
+                    icon={<span className="icon icon-earth" />}
+                    rounded
                     onClickHandler={action('onClickHandler')}
                     text={'Primary Button'}
                 />
@@ -39,7 +40,8 @@ const DummyComponent: React.FC = () => {
             <Paper elevation={0}>
                 <Box display="flex" flexWrap="wrap" justifyContent="space-around" p={2}>
                     <IconButton
-                        icon={'icon-global'}
+                        icon={<span className="icon icon-global" />}
+                        rounded
                         onClickHandler={action('onClickHandler')}
                         text={'Primary Button'}
                     />

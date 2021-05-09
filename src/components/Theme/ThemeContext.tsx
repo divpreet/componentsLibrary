@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import ComponentWOFF from '../../assets/fonts/Component.woff';
 import { dclDarkTheme, dclLightTheme, DclProPaletteType } from '../../styles/dclProTheme';
 import ComponentProducts from '../../utils/products';
 import { Overrides } from '@material-ui/core/styles/overrides';
@@ -71,13 +72,29 @@ export const ThemeProvider: React.FC<ThemeContextProps> = ({
     brandColour,
     theme: overriddenTheme = {}
 }) => {
+    const defaultOverride = {
+        MuiCssBaseline: {
+            '@global': {
+                '@font-face': [
+                    {
+                        fontFamily: 'Objective',
+                        fontStyle: 'normal',
+                        fontDisplay: 'block',
+                        fontWeight: 'normal',
+                        src: `url(${ComponentWOFF}) format('woff')`
+                    }
+                ]
+            }
+        }
+    };
+    const overrides = mergeDeep(defaultOverride, overriddenTheme.overrides);
     const lightTheme = {
         palette: mergeDeep(dclLightTheme, overriddenTheme.palette),
-        overrides: overriddenTheme.overrides
+        overrides
     };
     const darkTheme = {
         palette: mergeDeep(dclDarkTheme, overriddenTheme.palette),
-        overrides: overriddenTheme.overrides
+        overrides
     };
     const lightMuiTheme = createMuiTheme(lightTheme);
     const darkMuiTheme = createMuiTheme(darkTheme);

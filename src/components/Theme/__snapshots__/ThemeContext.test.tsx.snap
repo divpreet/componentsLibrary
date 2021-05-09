@@ -156,7 +156,21 @@ exports[`Theme Consumer renders correctly 1`] = `
             "minHeight": 56,
           },
         },
-        "overrides": undefined,
+        "overrides": Object {
+          "MuiCssBaseline": Object {
+            "@global": Object {
+              "@font-face": Array [
+                Object {
+                  "fontDisplay": "block",
+                  "fontFamily": "Objective",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                  "src": "url(test-file-stub) format('woff')",
+                },
+              ],
+            },
+          },
+        },
         "palette": Object {
           "action": Object {
             "activatedOpacity": 0.12,
@@ -673,7 +687,21 @@ exports[`Theme Context renders correctly 1`] = `
             "minHeight": 56,
           },
         },
-        "overrides": undefined,
+        "overrides": Object {
+          "MuiCssBaseline": Object {
+            "@global": Object {
+              "@font-face": Array [
+                Object {
+                  "fontDisplay": "block",
+                  "fontFamily": "Objective",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                  "src": "url(test-file-stub) format('woff')",
+                },
+              ],
+            },
+          },
+        },
         "palette": Object {
           "action": Object {
             "activatedOpacity": 0.12,
@@ -1188,7 +1216,21 @@ exports[`Theme useThemeContext renders correctly 1`] = `
             "minHeight": 56,
           },
         },
-        "overrides": undefined,
+        "overrides": Object {
+          "MuiCssBaseline": Object {
+            "@global": Object {
+              "@font-face": Array [
+                Object {
+                  "fontDisplay": "block",
+                  "fontFamily": "Objective",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                  "src": "url(test-file-stub) format('woff')",
+                },
+              ],
+            },
+          },
+        },
         "palette": Object {
           "action": Object {
             "activatedOpacity": 0.12,
