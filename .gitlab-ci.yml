@@ -1,0 +1,102 @@
+.templates:
+    - &npm_cache
+      key: 'node'
+      paths:
+          - node_modules/
+
+# default image to use unless overriden in specific stages
+image: artifactory.component.com:5000/component/node:latest-chrome-headless
+
+stages:
+    - test
+    - docgen
+    - build
+    - release
+
+test:
+    stage: test
+    cache: *npm_cache
+    except:
+        - schedules
+    tags:
+        - docker
+    artifacts:
+        name: coverage
+        expire_in: 2 days
+        paths:
+            - coverage
+        reports:
+            cobertura: coverage/cobertura-coverage.xml
+    script:
+        - npm install --unsafe-perm
+        - npm run coverage
+
+test:screenshots:
+    stage: test
+    cache: *npm_cache
+    except:
+        - schedules
+    tags:
+        - docker
+    artifacts:
+        when: on_failure
+        paths:
+            - src/test/__image_snapshots__/__diff_output__
+    script:
+        - npm install --unsafe-perm
+        - npm run test:screenshot
+
+docgen:
+    stage: docgen
+    cache: *npm_cache
+    only:
+        - master
+        - tags
+        - /^release\/.*/
+        - /^feature\/.*/
+    except:
+        - schedules
+    tags:
+        - docker
+    artifacts:
+        name: docs
+        expire_in: 2 days
+        paths:
+            - docs
+    script:
+        - npm install --unsafe-perm
+        - npm run docgen
+
+build:
+    stage: build
+    cache: *npm_cache
+    only:
+        - master
+        - tags
+        - /^release\/.*/
+        - /^feature\/.*/
+    except:
+        - schedules
+    tags:
+        - docker
+    artifacts:
+        name: build
+        expire_in: 2 days
+        paths:
+            - build/
+    script:
+        - npm install --unsafe-perm
+        - npm run build
+
+release:
+    stage: release
+    only:
+        - tags
+    tags:
+        - docker
+    when: manual
+    dependencies:
+        - build
+    script:
+        - echo '//multiplexmaven.eng.ocl:8080/artifactory/api/npm/npm-local/:_authToken=${NPM_DEVELOPER_TOKEN}'>.npmrc
+        - npm run release

@@ -1,0 +1,12 @@
+node_modules
+*.code-workspace
+.storybook
+src
+webpack.config.js
+babel.config.js
+.eslintrc.json
+.eslintignore
+*.sh
+setupTests.js
+*.lock
+.prettierrc

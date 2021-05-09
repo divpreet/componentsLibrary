@@ -1,0 +1,6 @@
+.gitignore
+/storybook-static
+/build/*
+/scripts/*
+/coverage/*
+/docs/*

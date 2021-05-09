@@ -1,0 +1,8 @@
+node_modules
+*.code-workspace
+build
+coverage
+docs
+.idea
+.DS_Store
+storybook-static

@@ -1,0 +1,81 @@
+{
+    "spacing": {
+        "xl": "84px",
+        "l": "48px",
+        "m": "36px",
+        "ms": "24px",
+        "s": "16px",
+        "xs": "12px",
+        "xxs": "8px",
+        "xxxs": "4px",
+        "factor4": {
+            "s100": "400px",
+            "s96": "384px",
+            "s90": "360px",
+            "s87": "348px",
+            "s80": "320px",
+            "s60": "240px",
+            "s59": "236px",
+            "s55": "220px",
+            "s50": "200px",
+            "s48": "192px",
+            "s45": "180px",
+            "s40": "160px",
+            "s36": "144px",
+            "s34": "136px",
+            "s30": "120px",
+            "s24": "96px",
+            "s22": "88px",
+            "s21": "84px",
+            "s20": "80px",
+            "s18": "72px",
+            "s16": "64px",
+            "s15": "60px",
+            "s14": "56px",
+            "s13": "52px",
+            "s12": "48px",
+            "s11": "44px",
+            "s10": "40px",
+            "s9": "36px",
+            "s8": "32px",
+            "s7": "28px",
+            "s6": "24px",
+            "s5": "20px",
+            "s4": "16px",
+            "s3": "12px",
+            "s2": "8px",
+            "s1": "4px"
+        }
+    },
+    "zIndex": {
+        "element": 0,
+        "element1": 1,
+        "component": 10
+    },
+    "animation": {
+        "duration": {
+            "fast": "100ms",
+            "400": "0.4s"
+        },
+        "timingFunction": {
+            "ease": "ease",
+            "fastOutSlowIn": "cubic-bezier(0.4, 0, 0.2, 1)"
+        }
+    },
+    "typography": {
+        "baseFamily": "Roboto, -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif",
+        "iconFamily": "Component",
+        "size": {
+            "xxsmall": "10px",
+            "xsmall": "11px",
+            "small": "12px",
+            "medium": "14px",
+            "large": "16px",
+            "xlarge": "18px",
+            "xxlarge": "24px"
+        },
+        "weight": {
+            "bold": 500
+        }
+    }
+}

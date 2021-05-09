@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.c0 .dclError__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+}
+
+.c0 .dclError__body {
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.c0 .dclError__title {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  color: #32373F;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin: 24px 0;
+}
+
+.c0 .dclError__message {
+  font-size: 16px;
+  font-weight: 400;
+  color: #525965;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.c0 .dclError__secondary {
+  font-size: 14px;
+  font-weight: 400;
+  color: #525965;
+}
+
+.c0 .dclError__resetBtn {
+  margin: 0 auto;
+}
+
+.c0 .dclError__resetIcon {
+  font-size: 12px;
+}
+
+.c0 .dclError__logo {
+  height: 348px;
+  width: 400px;
+  margin: 16px auto;
+}
+
+.c0.dclError__small .dclError__title {
+  font-weight: 400;
+}
+
+.c0.dclError__small .dclError__logo {
+  height: 160px;
+  width: 160px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="dclError__content"
+  >
+    <div
+      className="dclError__body"
+    >
+      <h1
+        className="dclError__title"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Test error heading",
+          }
+        }
+      />
+      <h2
+        className="dclError__message"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Test error message",
+          }
+        }
+      />
+      <Logo />
+      <ResetBtn />
+      <h3
+        className="dclError__secondary"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Test secondary message",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "ES2015",
+        "target": "es5",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "jsx": "react",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "lib": ["dom", "esnext"]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.js",
+        "src/**/*.jsx",
+        "setupTests.js",
+        "babel.config.js",
+        "screenshot.config.js",
+        "__mocks__/*.js"
+    ],
+    "exclude": ["node_modules", "storybook-static", "build"]
+}

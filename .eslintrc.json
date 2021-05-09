@@ -1,0 +1,81 @@
+{
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "parserOptions": {
+        "project": "tsconfig.json",
+        "ecmaVersion": 9,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "impliedStrict": true
+        }
+    },
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "camelcase": "error",
+        "curly": "error",
+        "eqeqeq": ["error", "always", { "null": "ignore" }],
+        "id-length": ["error", { "exceptions": ["_"] }],
+        "new-parens": "error",
+        "no-control-regex": "off",
+        "no-undef": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "vars": "all", "args": "all", "argsIgnorePattern": "^_.*_$" }
+        ],
+        "no-eval": "error",
+        "no-lone-blocks": "error",
+        "no-new-wrappers": "error",
+        "no-sequences": "error",
+        "no-useless-concat": "error",
+        "no-void": "error",
+        "no-with": "error",
+        "no-catch-shadow": "error",
+        "no-bitwise": ["error", { "int32Hint": true }],
+        "no-lonely-if": "error",
+        "no-unneeded-ternary": "error",
+        "one-var": ["error", "never"],
+        "quote-props": ["error", "as-needed"],
+        "spaced-comment": "error"
+    },
+    "globals": {
+        "require": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "overrides": [
+        {
+            "files": ["*.test.ts", "*.test.tsx", "src/**/*.js", "src/**/*.jsx"],
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off",
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "@typescript-eslint/no-empty-function": "off"
+            }
+        },
+        {
+            "files": ["index.d.ts"],
+            "rules": {
+                "@typescript-eslint/no-explicit-any": "off",
+                "@typescript-eslint/ban-types": "warn"
+            }
+        },
+        {
+            "files": ["**/*.tsx"],
+            "rules": {
+                "react/prop-types": "off"
+            }
+        }
+    ]
+}

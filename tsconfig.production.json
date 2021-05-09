@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es5",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "jsx": "react",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "lib": ["dom", "esnext"]
+    },
+    "include": ["src/**/*.js", "src/**/*.ts"],
+    "exclude": [
+        "node_modules",
+        "storybook-static",
+        "src/test",
+        "src/**/*.styled.js",
+        "src/**/*.styled.ts",
+        "src/**/*.test.js",
+        "src/**/*.spec.ts",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx"
+    ]
+}
